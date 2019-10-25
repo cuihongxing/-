@@ -1,0 +1,45 @@
+.gift-item-header{
+    /* border: 0.01rem solid; */
+    position: fixed;
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-left: 0.2rem;
+    margin-top: 0.2rem;
+}
+.gift-item-header>i{
+    font-size: 0.45rem;
+}
+.gift-item-img{
+    width: 100%;
+    // height: 3rem;
+    // border: 0.01rem solid;
+    img{
+        width: 100%;
+    }
+}
+.gift-item-input{
+    width: 80%;
+    height: 0.8rem;
+    border: 0.01rem solid hotpink;
+    margin: 0 auto;
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    input{
+        width: 3rem;
+        height: 0.5rem;
+        // margin: 0 auto;
+        border: 0.01rem solid darkorange;
+        font-size: 0.13rem;
+    }
+    button{
+        width: 1.2rem;
+        height: 0.55rem;
+        border: none;
+        outline: none;
+        background-color: indianred;
+        border-radius: 0.05rem;
+        color: white;
+    }
+}

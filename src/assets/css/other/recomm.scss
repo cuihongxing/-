@@ -1,0 +1,29 @@
+.recomm{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    
+    div{
+        width: 45%;
+        // border: 0.01rem solid;
+        margin-top: 0.1rem;
+        margin-left: 0.19rem;
+        margin-right: 0.1rem;
+        img{
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+        }
+        p{
+            margin-top: 0.06rem;
+        }
+        p:nth-child(3){
+            font-size: 0.14rem;
+            color: gray;
+        }
+        p:nth-child(4){
+            color: red;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.sign{
+    .sign-header{
+        width: 0.4rem;
+        position: fixed;
+        height: 0.4rem;
+        border: 0.01rem solid;
+        border-radius: 50%;
+        margin-left: 0.3rem;
+        margin-top: 0.3rem;
+        i{
+            font-size: 0.3rem;
+            margin-top: 0.06rem;
+            margin-left: 0.06rem;
+        }
+    }
+    .sign-content{
+        width: 100%;
+        height: 3.5rem;
+        background-color: #f1ead8;
+        text-align: center;
+        line-height: 0.8rem;
+        h4{
+            padding-top: 1rem;
+            font-size: 0.3rem;
+            color: #999;
+        }
+        p{
+            font-size: 0.5rem;
+            font-weight: 700;
+            color: #b3a078;
+        }
+    }
+    .sign-slide{
+        width: 100%;
+        height: 1.3rem;
+        background-color: #e8e1cf;
+    }
+    .sign-btn{
+        height: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button{
+            background-color: #b3a078;
+            border: none;
+            width: 3.1rem;
+            height: 0.69rem;
+            border-radius: 0.3rem;
+            font-size: 0.3rem;
+            color: #fff;
+            outline: none;
+        }
+    }
+    .sign-item{
+        margin-top: 0.1rem;
+        width: 100%;
+        height: 1.6rem;
+        background-color: #f4ebe2;
+        display: flex;
+        border-radius: 0.13rem;
+        // align-content: center;
+        justify-content: space-around;
+        // overflow: hidden;
+        div{
+            margin-top: 0.3rem;
+        }
+        .sign-item-i{
+            i{
+                font-size: 0.8rem;
+                color: #333;
+            }
+        }
+        div:nth-child(2){
+            margin-top: 0.4rem;
+            p:nth-child(2){
+                margin-top: 0.1rem;
+            }
+        }
+        div:nth-child(3){
+            margin-top: 0.55rem;
+            button{
+                width: 0.9rem;
+                height: 0.5rem;
+                border: none;
+                outline: none;
+                color: white;
+                background-color: #e1b68c;
+                border-radius: 0.05rem;
+            }
+        }
+    }
+}

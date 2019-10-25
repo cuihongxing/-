@@ -1,0 +1,16 @@
+.loogin{
+    width: 100%;
+    height: 0.8rem;
+    position: fixed;
+    border: 0.01rem solid #f2f2f2;
+    background-color: white;
+    img{
+        width: 30%;
+        height: 0.8rem;
+        display: block;
+        margin: 0 auto;
+    }
+}
+body,html{
+    padding-bottom: 0.8rem;
+}
