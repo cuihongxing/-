@@ -2,8 +2,8 @@
   <div>
 
           <ul>
-              <!-- <li> -->
-                <router-link :to="{ path:'/detail',query:{ id:newBarain.id } }" tag="li">
+              
+                <router-link :to="{ path:'/xxx',query:{ id:newBarain.id } }" tag="li">
                   <img :src="newBarain.pic" alt="">
                   <div class="kanjia-xx">
                     <p>{{newBarain.name}}</p>
@@ -19,8 +19,8 @@
                         <span>限量</span>
                     </p>
                   </div>
-                  </router-link>
-              <!-- </li> -->
+                </router-link>
+              
           </ul>
   </div>
 </template>

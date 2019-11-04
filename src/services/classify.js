@@ -45,5 +45,36 @@ class Classify {  //名称随便起
             }
         )
     }
+
+    //选择规则尺寸
+    // ClassiftPrice(){
+    //     // console.log(DetailId)
+    //     return _http.request(
+    //         {
+    //             type: 'post',
+    //             url: 'https://api.it120.cc/small4/shop/goods/price',
+    //             data: {
+                    
+    //             }
+    //         }
+    //     )
+    // }
+
+    //商品订单详情
+    Paydetail(obj){
+        // console.log(DetailId)
+        return _http.request(
+            {
+                type: 'post',
+                url: 'https://api.it120.cc/small4/order/detail',
+                data: {
+                    token:obj.token,
+                    id:obj.id
+                }
+            }
+        )
+    }
+
+    
 }
 export default Classify

@@ -23,7 +23,7 @@ export default {
 body{
   margin: 0;
 }
-.fade-enter-active,.v-leave-active {
+/* .fade-enter-active,.v-leave-active {
     transition: all .5s;
   }
   .fade-enter{
@@ -34,6 +34,6 @@ body{
     opacity: 0;
     transform: translateX(-100%);
     position:absolute;
-  }
+  } */
 
 </style>

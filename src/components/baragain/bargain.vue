@@ -8,7 +8,7 @@
       </div>
       
       <ul class="bargain-nav">
-          <router-link :to="{ path:'/detail',query:{ id:item.id } }" tag="li" v-for="(item,index) of list" :key="index">
+          <router-link :to="{ path:'/xxx',query:{ id:item.id } }" tag="li" v-for="(item,index) of list" :key="index">
               <div>
                   <img :src="item.pic" alt="">
               </div>

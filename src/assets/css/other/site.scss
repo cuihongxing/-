@@ -1,0 +1,144 @@
+.site-header{
+    width: 100%;
+    height: 0.7rem;
+    background-color: yellowgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    i{
+        font-size: 0.3rem;
+        margin-left: 0.3rem;
+    }
+    p{
+        font-size: 0.2rem;
+    }
+    i{
+        margin-right: 0.3rem;
+
+    }
+}
+
+
+.site-content{
+    margin-top: 0.7rem;
+    ul{
+        li{
+            display: flex;
+            width: 100%;
+            height: 0.7rem;
+            border-bottom: 0.01rem solid;
+            align-items: center;
+            justify-content: space-between;
+            input{
+                margin-left: 0.3rem;
+            }
+            i{
+                margin-right: 0.3rem;
+                font-size: 0.3rem;
+            }
+        }
+    }
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+    .selectAddress{
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        // left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .slts{
+            width: 3rem;
+            height: 2rem;
+            display: flex;
+            //align-content: space-around;
+            flex-wrap: wrap;
+            .el{
+                width: 3rem;
+                height: 1rem;
+            }
+            button{
+                width: 3rem;
+                height: 0.6rem;
+                background: gold;
+                border: none;
+                outline: none;
+                border-radius: 0.06rem;
+                color: #000;
+                font-size: 0.2rem;
+                letter-spacing: 0.1rem;
+            }
+        }
+    }
+}
+.upadress{
+    width: 5.6rem;
+    .tp{
+        width: 100%;
+        display: flex;
+        height: 0.5rem;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        background-color: white;
+        p:nth-of-type(2){
+            width: 90%;
+            text-align: center;
+        }
+    }
+    .box-item{
+        margin-top: 0.5rem;
+    }
+    .perInfo{
+        display: flex;
+        height: 0.7rem;
+        border-bottom: 0.01rem solid #ddd;
+        align-items: center;
+        width: 95%;
+        margin: 0 auto;
+        justify-content: space-between;
+        margin-left: 0.5rem;
+        >div{
+            width: 1.5rem;
+            text-align: left;
+        }
+        input{
+            width: 4rem;
+            height: 0.4rem;
+            font-size: 0.2rem;
+            border: none;
+            outline: none;
+        }
+    }
+    button{
+        width: 95%;
+        height: 0.6rem;
+        background: #1aac19;
+        margin: 0.1rem auto;
+        border:none;
+        outline: none;
+        display: block;
+        border-radius: 0.1rem;
+        color: white;
+        font-size: 0.24rem;
+        margin-left: 0.5rem;
+        &:nth-of-type(1){
+            margin-top: 0.3rem;
+        }
+        &:nth-of-type(2){
+             background: #e64240;
+        }
+        &:nth-of-type(3){
+             background: #ddd;
+        }
+    }
+}

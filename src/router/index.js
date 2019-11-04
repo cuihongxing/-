@@ -14,10 +14,15 @@ import ClassItem from '@/components/classify/classify-item'
 import Detail from '@/components/classify/classify-detail'
 import Login from '@/components/login/login'
 import Register from '@/components/login/register'
+import Site from '@/components/site/site'
+import Purchase from '@/components/purchase/purchase'
+import Pay from '@/components/purchase/pay'
+import SiteItem from '@/components/site/site-item'
+import Xxx from '@/components/home/xxx'
 
 Vue.use(Router)
 
-export default new Router({
+let router =  new Router({
   mode: 'history',
   routes: [
     {
@@ -89,6 +94,53 @@ export default new Router({
     {
       path: '/register',
       component: Register
+    },
+    {
+      path: '/site',
+      name: 'site',
+      component: Site
+    },
+    {
+      path: '/purchase',
+      name: 'purchase',
+      component: Purchase,
+      meta: {
+        token:localStorage.getItem('token')
+      }
+    },
+    {
+      path: '/siteitem',
+      component: SiteItem
+    },
+    {
+      path: '/pay',
+      name: 'pay',
+      component: Pay
+    },
+    {
+      path: '/xxx',
+      component: Xxx
     }
   ]
 })
+
+
+  //全局 前置 钩子
+router.beforeEach((to, from, next) => {
+    let isLogin = localStorage.getItem('token');
+    if(isLogin){
+      
+      next()
+    }else{
+        //如果没有token值跳转登录页面
+        // if (to.path === '/login') {
+        //   next()
+        // } else {
+        //   next('/login')
+        // }
+        next({to:'/ligon'})
+    }
+})
+
+
+export default router

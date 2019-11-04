@@ -138,7 +138,7 @@ export default {
             if(res.data.code == 0 || res.data.code == 10000){
               this.$router.push("/login")
             }else{
-              alert(注册失败)
+              alert("注册失败")
             }
         })
     }

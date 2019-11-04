@@ -32,11 +32,11 @@
   color: white;
 }
 
-.user-info .user-info-detail p:nth-child(2) {
+.user-info .user-info-detail p:nth-child(3) {
   border: 0.01rem solid #b3a078;
   background-color: #b3a078;
   color: white;
-  width: 0.8rem;
+  width: 0.9rem;
   height: 0.3rem;
   line-height: 0.3rem;
   margin-top: 0.19rem;

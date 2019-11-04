@@ -28,6 +28,7 @@
 
 <script>
 
+import Local from '../../local/local'
 import Register from '../../services/login'
 let _register = new Register()
 
@@ -49,19 +50,22 @@ export default {
         this.$refs.newPassword.setAttribute("type","password")
       }
     },
-    //登录
+    //登录时
     login(){
       let obg = {
           mobile:this.name,
           pwd:this.passrow
       }
       _register.LoginRe(obg).then((res)=>{
-          console.log(res.data.code)
+          console.log(res.data.data.token)
             if(res.data.code==0){
-              this.$router.push('/')
+              this.$store.commit('login',res.data.data.token)
+              this.$router.push('/me')
+              Local.set('token',res.data.data.token)
             }else if(res.data.code==600){
               alert("请输入账号密码")
             }
+            
         })
     }
   }

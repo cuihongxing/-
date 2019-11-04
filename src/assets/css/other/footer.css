@@ -24,3 +24,7 @@
   font-size: 0.3rem;
   margin-top: 0.1rem;
 }
+
+.footer div .active {
+  color: red;
+}

@@ -4,8 +4,9 @@
           <div class="user-info-avatar">
             <i class="el-icon-user-solid"></i>
           </div>
-          <div class="user-info-detail">
-              <router-link to="/login" tag="p">点击登录</router-link>
+          <div class="user-info-detail" >
+              <router-link to="/login" tag="p" v-show="this.$store.state.local.length == 0" >点击登录</router-link>
+              <button v-show="!this.$store.state.local.length==0" @click="att">退出登录</button>
               <p>积分：0</p>
           </div>
       </div>
@@ -63,10 +64,10 @@
                   <i class="el-icon-star-on"></i>
                   <p>我的收藏</p>
               </li>
-              <li>
+              <router-link :to="{ name:'site',params:{token:this.$store.state.local }}" tag="li">
                   <i class="el-icon-map-location"></i>
                   <p>我的地址</p>
-              </li>
+              </router-link>
               <li>
                   <i class="el-icon-headset"></i>
                   <p>联系客服</p>
@@ -78,6 +79,12 @@
 
 <script>
 export default {
+  methods: {
+    att(){
+      localStorage.clear('token');
+      this.$router.go(0);
+    }
+  },
 
 }
 </script>
