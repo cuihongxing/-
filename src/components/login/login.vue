@@ -53,7 +53,7 @@ export default {
     //登录时
     login(){
       let obg = {
-          mobile:this.name,
+          mobile:this.name, 
           pwd:this.passrow
       }
       _register.LoginRe(obg).then((res)=>{
@@ -65,7 +65,6 @@ export default {
             }else if(res.data.code==600){
               alert("请输入账号密码")
             }
-            
         })
     }
   }

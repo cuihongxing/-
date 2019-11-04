@@ -19,9 +19,11 @@ import Purchase from '@/components/purchase/purchase'
 import Pay from '@/components/purchase/pay'
 import SiteItem from '@/components/site/site-item'
 import Xxx from '@/components/home/xxx'
+import store from '../store'
+import Local from '../local/local'
 
 Vue.use(Router)
-
+import Store from '../store/index.js'
 let router =  new Router({
   mode: 'history',
   routes: [
@@ -46,8 +48,8 @@ let router =  new Router({
         {
           path: 'shop',
           component: Shop,
-          meta:{
-            title: '购物车'
+          meta: {
+            requireAuth:true
           }
         },
         {
@@ -104,9 +106,7 @@ let router =  new Router({
       path: '/purchase',
       name: 'purchase',
       component: Purchase,
-      meta: {
-        token:localStorage.getItem('token')
-      }
+     
     },
     {
       path: '/siteitem',
@@ -127,19 +127,16 @@ let router =  new Router({
 
   //全局 前置 钩子
 router.beforeEach((to, from, next) => {
-    let isLogin = localStorage.getItem('token');
-    if(isLogin){
-      
+  console.log()
+      if(to.path == '/site' && !Store.state.local){
+        next('/login')
+      }
       next()
-    }else{
-        //如果没有token值跳转登录页面
-        // if (to.path === '/login') {
-        //   next()
-        // } else {
-        //   next('/login')
-        // }
-        next({to:'/ligon'})
-    }
+
+      if(to.path == '/purchase' && !Store.state.local){
+        next('/login')
+      }
+      next()
 })
 
 

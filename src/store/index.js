@@ -6,7 +6,7 @@ import Local from '../local/local'
 
 const store = new Vuex.Store({
     state: {
-        local:"",
+        local:'',
         guess:Local.get('list')||[],
         order:[]
         // num:''
